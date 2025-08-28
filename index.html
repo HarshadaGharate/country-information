@@ -27,11 +27,11 @@
 <body>
     <h1 class="heading">Explore the world</h1>
     <input type="text" id="country" placeholder="Enter a country name">
-    <button id="info-btn">Get Info</button>
+    <button id="info-btn" onclick="countryInfo()">Get Info</button>
     <div id="countryDiv"></div>
 
     <script>
-        const countryDetail = {
+        const countryName = {
              India:{
                Name:'India',
                Image:'https://5.imimg.com/data5/SELLER/Default/2023/12/370478461/YK/RI/SX/5650316/indian-national-polyester-flag.jpeg;',
@@ -78,6 +78,28 @@
                 FunFact:"Thailand is known as the 'Land of Smiles' because of its friendly and welcoming people."
             }
         }
+
+        function countryInfo(){
+        const btnElement = document.getElementById("info-btn").value.toLowerCase();
+        const divElement = document.getElementById("countryDiv");
+        countryDetails = countryName[btnElement];
+
+        if(!countryDetails){
+            alert("city not found");
+            return;
+        }
+        
+        divElement.innerHTML =
+         `<img src = "${countryDetails.Image}" alt="${countryDetails.Name}" height = "200px">
+         <h2>${cityDetails.Name}</h2>
+         <h3>${cityDetails.Capital}</h3>
+         <p>${cityDetails.Currency}</p>
+         <p>${citydetails.Language}</p>
+         <p>${cityDetails.FamousPlace}</p>
+         <p>${cityDetails.FunFact}</p>  
+         `
+        }
+
     </script>
 </body>
 </html>
