@@ -5,23 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>country information</title>
     <style>
+        body{
+            background-color: #f2e6ff;
+        }
        .heading{
         text-align: center;
+        color: #25004d;
        } 
        #country{
-           font-size: 18px;
+           font-size: 16px;
+           border: 1px solid #25004d;
             border-radius: 30px;
             padding: 5px 9px;
             display: block;
             margin: 5px auto;
        }
        #info-btn{
-            font-size: 15px;
+            font-size: 14px;
+            border: 1px solid #25004d;
             border-radius: 14px;
-            padding: 3px 5px;
+            padding: 3px 15px;
             display: block;
             margin: 20px auto;
        }
+       
     </style>
 </head>
 <body>
@@ -90,13 +97,13 @@
         }
         
         divElement.innerHTML =
-         `<img src = "${countryDetails.Image}" alt="${countryDetails.Name}" height = "200px">
-         <h2>${countryDetails.Name}</h2>
-         <h3>${countryDetails.Capital}</h3>
-         <p>${countryDetails.Currency}</p>
-         <p>${countryDetails.Language}</p>
-         <p>${countryDetails.FamousPlace}</p>
-         <p>${countryDetails.FunFact}</p>  
+         `<img src = "${countryDetails.Image}" alt="${countryDetails.Name}" height = "200px; padding:2px 8px;">
+         <h1 style = "color: #4a0099; padding:0px 8px;">${countryDetails.Name}</h1>
+         <h2 style = "color:#cc0000; padding:0px 8px;">${countryDetails.Capital}</h2>
+         <p style = "font-size:18px; padding:0px 8px;">${countryDetails.Currency}</p>
+         <p style = "font-size:18px; padding:0px 8px;">${countryDetails.Language}</p>
+         <p style = "font-size:18px; padding:0px 8px;">${countryDetails.FamousPlace}</p>
+         <p style = "font-size:18px; padding:0px 8px;">${countryDetails.FunFact}</p>  
          `
         }
 
